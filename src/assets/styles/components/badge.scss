@@ -1,0 +1,34 @@
+.anwg-badge {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  width: max-content;
+  padding: 0 10px;
+
+  background-color: #2563EB;
+  color: #FFFFFF;
+
+  position: fixed;
+  right: -70px;
+  transform: translate3d(-30px, 60px,0) rotate(-90deg);
+  transition: all 0.3s ease-in-out;
+  top: 50%;
+
+  cursor: pointer;
+  border-radius: 5px;
+
+  &__icon {
+    width: 18px;
+  }
+
+  &__label {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+  }
+
+  &:hover {
+    right: -60px;
+  }
+}

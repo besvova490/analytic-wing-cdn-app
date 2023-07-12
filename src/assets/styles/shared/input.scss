@@ -1,0 +1,48 @@
+.anwg-input {
+  border-radius: 12px;
+  border: 1px solid var(--greyscale-200, #E2E8F0);
+
+  display: flex;
+  height: 32px;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+
+  color: var(--greyscale-900, #0F172A);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+
+  &::placeholder { color: var(--greyscale-400, #94A3B8); }
+  &:focus {
+    outline: none;
+    border-color: #E2E8F0;
+  }
+}
+
+.anwg-textarea {
+  border-radius: 12px;
+  border: 1px solid var(--greyscale-200, #E2E8F0);
+
+  padding: 16px;
+
+  color: var(--greyscale-900, #0F172A);
+  /* body/large/medium */
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+
+  &::placeholder { color: var(--greyscale-400, #94A3B8); }
+
+  &:focus {
+    outline: none;
+    border-color: #E2E8F0;
+  }
+}

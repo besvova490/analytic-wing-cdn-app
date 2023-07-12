@@ -1,0 +1,27 @@
+.anwg-button {
+  border-radius: 12px;
+  background: var(--primary-600-base, #2563EB);
+  border: 1px solid transparent;
+  
+  padding: 8px;
+  height: 50px;
+  width: max-content;
+  cursor: pointer;
+
+  color: var(--additional-white, #FFF);
+  /* Heading/H6 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+
+  &_type-default {
+    border: 1px solid var(--greyscale-200, #E2E8F0);
+    background: var(--additional-white, #FFF);
+    color: var(--greyscale-900, #0F172A);
+  }
+
+  &_full-width { width: 100%; }
+}

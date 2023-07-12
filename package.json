@@ -1,0 +1,24 @@
+{
+  "name": "analytic-wing-cdn-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "js-cookie": "^3.0.5",
+    "preact": "^10.15.1",
+    "preact-portal": "^1.1.3",
+    "preact-render-to-string": "^6.1.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.63.6"
+  },
+  "scripts": {
+    "dev": "npx parcel src/index.js",
+    "build": "npx parcel build src/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

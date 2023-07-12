@@ -1,0 +1,26 @@
+.anwg-label-error {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__label {
+    color: var(--greyscale-900, #0F172A);
+    /* body/medium/bold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+  }
+
+  &__error {
+    color: var(--secondary-glamour-pink-500-base, #ED4F9D);
+    /* body/large/semibold */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+  }
+}
