@@ -6,6 +6,7 @@ import Badge from './components/Badge';
 
 // helpers
 import initUser from './helpers/userInit';
+import selectorsInit from './helpers/selectorsInit';
 import pageLoadEvent from './helpers/eventControllers/pageLoadEvent';
 import initDataLayerEvents from './helpers/eventControllers/initDataLayerEvents';
 
@@ -20,6 +21,8 @@ function App() {
       pageLoadEvent();
       initDataLayerEvents();
     });
+
+    selectorsInit();
   
     const styleLink = document.createElement('link');
     styleLink.rel = 'stylesheet';
