@@ -6,6 +6,7 @@
 .pnp.js
 .vscode
 .cache
+.parcel-cache
 
 # testing
 /coverage
