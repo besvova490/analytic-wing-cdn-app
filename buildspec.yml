@@ -7,6 +7,7 @@ env:
 phases:
   install:
     commands:
+      - echo $APP_BUCKET, $ENV_BUCKET, $ENV_FILE
       - echo "******** Install dependencies  *********"
       - node -v
       - npm install --legacy-peer-deps
@@ -22,8 +23,8 @@ phases:
       - echo "******** Build App *********"
       - npm run build
       - echo "******** Copying files to app S3 bucket *********"
-      - aws s3 sync dist/ s3://${APP_BUCKET}/* --delete
-      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+      - aws s3 sync dist/ s3://${APP_BUCKET} --delete
+      # - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
 
 cache:
   paths:
