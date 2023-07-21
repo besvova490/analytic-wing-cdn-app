@@ -22,7 +22,7 @@ phases:
       - echo "******** Build App *********"
       - npm run build
       - echo "******** Copying files to app S3 bucket *********"
-      - aws s3 sync public/ s3://${APP_BUCKET}
+      - aws s3 sync dist/ s3://${APP_BUCKET}
       # - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
 
 cache:
