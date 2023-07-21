@@ -1,0 +1,30 @@
+version: 0.2
+
+env:
+  variables:
+    cloudfront_distribution_id: ""
+
+phases:
+  install:
+    commands:
+      - echo "******** Install dependencies  *********"
+      - node -v
+      - npm install --legacy-peer-deps
+
+  pre_build:
+    commands:
+      - echo "******** Copy .env file from env S3 bucket ********"
+      - aws s3 cp s3://${ENV_BUCKET}/${ENV_FILE} .env
+
+
+  build:
+    commands:
+      - echo "******** Build App *********"
+      - npm run clean && npm run build
+      - echo "******** Copying files to app S3 bucket *********"
+      - aws s3 sync public/ s3://${APP_BUCKET}
+      # - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+
+cache:
+  paths:
+    - 'node_modules/**/*'
