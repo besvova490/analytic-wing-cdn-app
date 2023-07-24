@@ -26,7 +26,7 @@ function App() {
   
     const styleLink = document.createElement('link');
     styleLink.rel = 'stylesheet';
-    styleLink.href = './dist/index.css';
+    styleLink.href = 'https://d2n1rbeywfufu8.cloudfront.net/index.css';
     styleLink.onload = () => setIsStylesLoaded(true);
   
     document.head.appendChild(styleLink);
